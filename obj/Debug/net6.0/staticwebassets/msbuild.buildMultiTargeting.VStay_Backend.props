@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\VStay_Backend.props" />
+</Project>
