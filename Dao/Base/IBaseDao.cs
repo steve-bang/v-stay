@@ -47,9 +47,9 @@ namespace VStay_Backend.Dao.Base
         /// <summary>
         /// Gets all records from the database with the given filter, then converts them to entities.
         /// </summary>
-        /// <param name="count">The total number of records that match the filter.</param>
+        /// <param name="TotalItems">The total number of records that match the filter.</param>
         /// <param name="filter">The filter to apply.</param>
         /// <returns>The entities.</returns>
-        IEnumerable<T> List(out int TotalRows, IBaseFilter filter);
+        IEnumerable<T> List(IBaseFilter filter, out int totalItems);
     }
 }
