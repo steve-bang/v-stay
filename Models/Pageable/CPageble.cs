@@ -60,6 +60,17 @@
         }
 
         /// <summary>
+        /// Init the object with items and total items.
+        /// </summary>
+        /// <param name="items">The list of the items.</param>
+        /// <param name="totalItems">The total items.</param>
+        public CPageble(IEnumerable<T> items, long totalItems)
+        {
+            Items = items;
+            TotalItems = totalItems;
+        }
+
+        /// <summary>
         /// Creates a new CPageble.
         /// </summary>
         /// <param name="items">The list of the items.</param>

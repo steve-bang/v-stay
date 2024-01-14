@@ -26,6 +26,12 @@ namespace VStay_Backend.Models.Entities
         /// <inheritdoc/>
         public abstract T ParseDataRow(DataRow dataRow);
 
+        /// <inheritdoc/>
+        public abstract IDictionary<string, object> BuildInsert();
+
+        /// <inheritdoc/>
+        public abstract IDictionary<string, object> BuildUpdate();
+
     }
 
     /// <summary>

@@ -41,5 +41,17 @@ namespace VStay_Backend.Models.Entities
         /// <returns>The instance of the entity.</returns>
         T ParseDataRow(DataRow dataRow);
 
+        /// <summary>
+        /// Build the insert param.
+        /// </summary>
+        /// <returns></returns>
+        IDictionary<string, object> BuildInsert();
+
+        /// <summary>
+        /// Build the update param.
+        /// </summary>
+        /// <returns></returns>
+        IDictionary<string, object> BuildUpdate();
+
     }
 }

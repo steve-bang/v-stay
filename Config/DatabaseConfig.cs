@@ -12,7 +12,7 @@
         /// Intilialize the configuration interface.
         /// </summary>
         /// <param name="configuration">The configuration DI.</param>
-        public static void Intitialize(IConfiguration configuration)
+        public static void Inittialize(IConfiguration configuration)
         {
             _configuration = configuration;
         }

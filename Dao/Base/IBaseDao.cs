@@ -1,6 +1,6 @@
 ﻿using VStay_Backend.Models.Filters.Base;
 
-namespace VStay_Backend.Dao.Base
+namespace VStay_Backend.Dao
 {
     /// <summary>
     /// Defines the generic base interface for all DAOs in the system.<br/>
@@ -21,21 +21,21 @@ namespace VStay_Backend.Dao.Base
         /// </summary>
         /// <param name="entity">The entity to update.</param>
         /// <returns>The affected rows.</returns>
-        long Update(T entity);
+        bool Update(T entity);
 
         /// <summary>
         /// Deletes a record from the database then returns the affected rows.
         /// </summary>
         /// <param name="id">The Id of the entity to delete.</param>
         /// <returns>The affected rows.</returns>
-        long Delete(long id);
+        bool Delete(long id);
 
         /// <summary>
         /// Gets a record from the database by an id.
         /// </summary>
         /// <param name="id">The id of the record to get.</param>
         /// <returns>The entity.</returns>
-        T Get (long id);
+        T? Get (long id);
 
         /// <summary>
         /// Gets all records from the database with the given filter.
@@ -50,6 +50,6 @@ namespace VStay_Backend.Dao.Base
         /// <param name="TotalItems">The total number of records that match the filter.</param>
         /// <param name="filter">The filter to apply.</param>
         /// <returns>The entities.</returns>
-        IEnumerable<T> List(IBaseFilter filter, out int totalItems);
+        IEnumerable<T> List(IBaseFilter filter, out long totalItems);
     }
 }

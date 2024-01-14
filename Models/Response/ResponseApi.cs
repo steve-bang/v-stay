@@ -1,38 +1,34 @@
-﻿/**
- * The response api to client for all api.
- */
+﻿
+using VStay_Backend.Models.Response.Base;
+/**
+* The response api to client for all api.
+*/
 namespace VStay_Backend.Models.Response
 {
     /// <summary>
     /// This class is used when to return the data for client request.
     /// </summary>
     /// <typeparam name="T">The type of the data.</typeparam>
-    public class ResponseApi <T>
+    public class ResponseApi : BaseResponseApi
+    {
+
+        public ResponseApi(object data) : base(data) { }
+
+    }
+
+    /// <summary>
+    /// The error class while throw exception to client.
+    /// </summary>
+    public class CError
     {
         /// <summary>
-        /// This message is use to return when the request was success.
+        /// The model code error while work with model.
         /// </summary>
-        public const string MessageSuccess = "The request wass successfull.";
+        public int ModelCode { get; set; }
 
         /// <summary>
-        /// Is the requests was success.
+        /// The message error.
         /// </summary>
-        public bool Success { get; set; }
-
-        /// <summary>
-        /// The message of the response.
-        /// </summary>
-        public string Message { get; set; } = MessageSuccess;
-
-        /// <summary>
-        /// The code of the response.
-        /// </summary>
-        public int Code { get; set; }
-
-        /// <summary>
-        /// The data of the response.
-        /// </summary>
-        public T? Data;
-
+        public string Message { get; set; } = string.Empty;
     }
 }
