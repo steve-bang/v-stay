@@ -1,14 +1,11 @@
-﻿using VStay_Backend.Models.Filters.Base;
-
-namespace VStay_Backend.Models.Filters.Interfaces
+﻿namespace VStay_Backend.Models.Filters.Interfaces
 {
     /// <summary>
-    /// This defines the interface for the PerissionFilter class.<br/>
-    /// It is used to filter the Permissions in the system.
+    /// This defines the interface for the RoleFilter class.<br/>
+    /// It is used to filter the Roles in the system.
     /// </summary>
-    public interface IPermissionFilter : IBaseFilter
+    public interface IRoleFilter
     {
-
         /// <summary>
         /// Gets or sets the @Name parameter value.
         /// </summary>
@@ -18,6 +15,5 @@ namespace VStay_Backend.Models.Filters.Interfaces
         /// Gets or sets the @Description parameter value.
         /// </summary>
         string Description { get; set; }
-
     }
 }
